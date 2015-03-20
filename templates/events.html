@@ -1,0 +1,19 @@
+<ion-view view-title="Events">
+    <ion-nav-buttons side="right" >
+        <button class="button button-icon button-clear ion-plus-round" menu-toggle="right" ng-if="add" ng-click="add()"></button>
+        <button class="button button-icon button-clear ion-arrow-up-c" menu-toggle="right" ng-if="refresh" ng-click="refresh()"></button>
+        <button class="button button-icon button-clear ion-minus" menu-toggle="right" ng-if="clearMemory" ng-click="clearMemory()"></button>
+    </ion-nav-buttons>
+  <ion-content>
+     <progress ng-if="ImageCounter" max="{{ImageCounter.total}}" value="{{ImageCounter.current}}"></progress>
+    <ion-list>
+        <!--ui-sref="app.event({event: {{event.eventId}} })"-->
+      <ion-item class="item-avatar" ng-repeat="event in events" ng-if="event.eventId" href="#/app/event/{{event.eventId}}">
+          <img src="{{event.avatar}}">
+          <span class="event-id">{{event.eventId}}</span>
+          <h2>{{event.title}}</h2>
+          <p>{{event.description}}</p>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

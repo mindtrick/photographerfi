@@ -1,0 +1,22 @@
+<ion-view view-title="Gallery">
+    <ion-nav-buttons side="right" >
+        <button class="button button-icon button-clear ion-refresh" menu-toggle="right" ng-if="upload" ng-click="upload()" ></button>
+    </ion-nav-buttons>
+  <ion-content id="gallery-content">
+      <progress ng-if="ImageCounter" max="{{ImageCounter.total}}" value="{{ImageCounter.current}}"></progress>
+        <div id="gallery-container">
+            <div id="gallery-msg" ng-if="Images.length == 0">No new Images</div>
+            <div class="gallery-image" ng-repeat="picture in Images" gallery-finish>
+                <div class="image-checkbox">
+                    <label class="checkbox">
+                        <!--<input type="checkbox" ng-model="" aria-selected="true" value="on" checked="true">-->
+                        <input type="checkbox" ng-model="picture.uploaded" ng-checked="true" />
+
+                    </label>
+                </div>
+                 <img ng-src="{{picture.thumbnail}}">
+              </div>
+
+        </div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,39 @@
+/* Empty. Add your own CSS if you like */
+
+.gallery-image{
+    display: inline-flex;
+    margin: -3px 1px;
+    height: auto;
+}
+
+#gallery-content{
+    width: 95%;
+    margin: 0 auto;
+}
+
+.item-img{
+    margin: 0 auto;
+}
+
+.image-checkbox
+{
+    z-index: 9999;
+    position: absolute;
+}
+.event-id{
+    float:right;
+    margin-top:10px;
+}
+
+.fixed{
+    position: fixed;
+}
+
+#gallery-msg{
+    margin: 0 auto;
+
+}
+
+#gallery-container{
+    text-align: center;
+}
