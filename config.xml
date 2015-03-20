@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+    <widget xmlns   = "http://www.w3.org/ns/widgets"
+        xmlns:gap   = "http://phonegap.com/ns/1.0"
+        id          = "com.phonegap.example"
+        versionCode = "10" 
+        version     = "1.0.0" >
+
+    <!-- versionCode is optional and Android only -->
+	<preference name="loglevel" value="DEBUG" />
+    <feature name="Keyboard">
+        <param name="android-package" value="com.ionic.keyboard.IonicKeyboard" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="Device">
+        <param name="android-package" value="org.apache.cordova.device.Device" />
+    </feature>
+    <feature name="SQLitePlugin">
+        <param name="android-package" value="org.pgsqlite.SQLitePlugin" />
+    </feature>
+    <name>PhoneGap Example</name>
+
+    <description>
+        An example for phonegap build docs. 
+    </description>
+
+    <author href="https://build.phonegap.com" email="support@phonegap.com">
+        Hardeep Shoker 
+    </author>
+	<gap:platform name="android" />
+	<content src="index.html"/>
+	  <access origin="http://flashair/"/>
+	  <access origin="*"/>
+	  <preference name="webviewbounce" value="false"/>
+	  <preference name="UIWebViewBounce" value="false"/>
+	  <preference name="DisallowOverscroll" value="true"/>
+	  <preference name="BackupWebStorage" value="none"/>
+</widget>
